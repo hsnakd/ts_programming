@@ -1,0 +1,52 @@
+Playwright Day08:
+	TypeScript Programming
+	Playwright with TypeScript
+
+	AI
+
+
+
+
+JavaScript vs TypeScript:
+    
+    JavaScript: 
+        1. Dynamically Typed, allows variables to change types at runtime.
+
+        2. Interpreted language that runs without prior compilation.
+
+        3. Errors are typically caught at runtime.
+
+        4. Less maintainable in large projects (no Type Safety).
+
+        5. Does not support all OOP principles
+
+
+    TypeScript:
+        1. Statically Typed, enables type checking at compile time, which helps catch errors early.
+
+        2. Compiled language that needs to be compiled into JavaScript before execution.
+
+        3. Errors are caught at compile time (reduces runtime errors and improves code reliability).
+
+        4. Improves maintainability and readability, especially in large codebases (Type Safety).
+
+        5. Supports all OOP principles.
+
+
+
+On Monday:
+	Certificate of Completion
+
+
+
+module A:
+	let nextButton: Locator;
+
+
+module B:
+	nextButton.
+
+
+
+
+come back at 1:10 pm
