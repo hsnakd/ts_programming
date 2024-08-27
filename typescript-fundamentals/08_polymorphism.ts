@@ -1,4 +1,4 @@
-import { Shape, Circle, Rectangle, Cube } from "./abstraction";
+import { Shape, Circle, Rectangle, Cube } from "./07_abstraction";
 
 let circle: Circle = new Circle(5);
 

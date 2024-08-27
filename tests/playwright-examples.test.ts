@@ -1,41 +1,37 @@
-import { test, expect, Locator } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 
-test.describe("Test Group", () => {
-  let links: Locator;
-
+test.describe('Cydeo Practice Website Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("https://practice.cydeo.com/");
-    links = page.locator("//li[@class='list-group-item']/a");
+    await page.goto('https://practice.cydeo.com/');
   });
 
-  test("Verify that URL contains practice.cydeo and title is practice", async ({
-    page,
-  }) => {
-    expect(page.url()).toContain("practice.cydeo");
-    expect(await page.title()).toBe("Practice");
+  test('Test Case 1: Verify URL and Title', async ({ page }) => {
+    expect(page.url()).toContain('practice.cydeo');
+    await expect(page).toHaveTitle('Practice');
   });
 
-  test("Verify that all the practice links are displayed and enabled", async ({
-    page,
-  }) => {
-    for (let eachLink of await links.all()) {
-      await expect(eachLink).toBeVisible();
-      await expect(eachLink).toBeEnabled();
+  test('Test Case 2: Verify links are displayed and enabled', async ({ page }) => {
+    const links = page.locator('a');
+    
+    for (const link of await links.all()) {
+      await expect(link).toBeVisible();
+      await expect(link).toBeEnabled();
     }
   });
 
-  test("Verify Checkboxes element is inlcuded in the list of practice links", async ({
-    page,
-  }) => {
-    let checkboxesElementExist: boolean = false;
+  test('Test Case 3: Verify Checkboxes element is included in the list of links', async ({ page }) => {
+    const linksList = page.locator('//ul[@class="list-group"]/li');
+    let checkboxesFound = false;
 
-    for (let eachLink of await links.all()) {
-      if ((await eachLink.innerText()) === "Checkboxes") {
-        checkboxesElementExist = true;
+    for (const link of await linksList.all()) {
+      if (await link.textContent() === 'Checkboxes') {
+        checkboxesFound = true;
         break;
       }
     }
-    expect(checkboxesElementExist).toBeTruthy();
+
+    expect(checkboxesFound).toBeTruthy();
   });
-  
+
+
 });
