@@ -4,7 +4,7 @@ export class Item{
     private itemPrice!: number; 
 
     /*
-    (!) means that we are telling typscript that those properties will be 
+    (!) means that we are telling typescript that those properties will be 
     initialized eventually, because typescript has strick property 
     initialization check
     */

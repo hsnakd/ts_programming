@@ -1,5 +1,5 @@
-import { Person, displayMessage } from "./class-object";
-import { Item } from "./encapsulation";
+import { Person, displayMessage } from "./04_class-object";
+import { Item } from "./06_encapsulation";
 
 let person = new Person("Daniel", 40, "Male", true);
 console.log(person);
